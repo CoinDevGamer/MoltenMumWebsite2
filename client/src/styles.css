@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-rivet { @apply px-4 py-2 rounded-plank text-white font-semibold shadow-rivet; background: linear-gradient(#a94f31,#7e3b20); border:2px solid rgba(0,0,0,.3); position:relative;}
+.btn-rivet::before,.btn-rivet::after{content:''; position:absolute; width:10px; height:10px; border-radius:9999px; background:#3b2a23; box-shadow: inset 0 0 0 2px rgba(255,255,255,.1); top:50%; transform:translateY(-50%);}
+.btn-rivet::before{left:8px} .btn-rivet::after{right:8px}
+.card-parchment{ @apply rounded-plank p-4 border bg-barn-parchment; }
+.input-etched{ @apply rounded-md px-3 py-2 border w-full; background:#fbf7ee; border-color:#6e7376; }
+.bg-wood{ background: linear-gradient(180deg,#7a503e,#5a3d2f); color:#f7efe8; }
+.badge{ @apply inline-flex items-center text-xs px-2 py-0.5 rounded-full border; }
+.badge-red{ @apply badge; background:#fee2e2; border-color:#fecaca; }
+.badge-green{ @apply badge; background:#dcfce7; border-color:#bbf7d0; }
+.badge-amber{ @apply badge; background:#fef3c7; border-color:#fde68a; }
+
+@keyframes shine {
+  0% { transform: translateX(-150%); }
+  60% { transform: translateX(150%); }
+  100% { transform: translateX(150%); }
+}

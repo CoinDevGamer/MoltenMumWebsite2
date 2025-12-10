@@ -1,0 +1,13 @@
+# never upload dependencies
+node_modules
+
+# build outputs
+dist
+build
+
+# env / secrets
+.env
+*.env
+
+# mac junk
+.DS_Store
