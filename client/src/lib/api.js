@@ -1,10 +1,20 @@
 import axios from "axios";
 
+// Backend URL from Vite env variable
+const API_URL = import.meta.env.VITE_API_URL;
+
 // Create reusable Axios instance for all backend requests
 export const api = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: `${API_URL}/api`,
   withCredentials: true,
 });
+
+export const full = (path) => {
+  if (!path) return "";
+  if (path.startsWith("http")) return path;
+  return `${API_URL}${path}`;
+};
+
 
 // ============================
 // 🛍️ CATALOG (FINAL MERGED VERSION)
